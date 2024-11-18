@@ -6,7 +6,7 @@ import { FaHeart, FaStar } from 'react-icons/fa'
 
 function NewFoods() {
     return (
-        <div className='py-3 sm:px-4 md:px-6 lg:px-6'>
+        <div className='py-3 sm:px-4 md:px-6 lg:px-6 mt-24'>
             <div className="container mx-auto py-[2vh]">
                 <div className="text-2xl md:text-3xl font-bold text-center text-[#2e2e2e] lg:text-4xl">
                     New <span className='text-[#f54748]'>Foods</span>

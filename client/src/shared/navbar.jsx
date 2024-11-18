@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '../assets/food-logo.png'
 import { TiThMenu } from "react-icons/ti"
 import { RxCross2 } from "react-icons/rx"
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
@@ -13,16 +14,18 @@ export default function Navbar() {
         <div className='bg-white/80 shadow-md fixed top-0 left-0 w-full z-40 ease-in duration-300 backdrop-md'>
             <div className='py-3 px-10 sm:px-4 md:px-6 lg:px-6 container'>
                 <div className='flex items-center justify-between'>
-                    <img src={logo} alt="food logo" className='h-14 cursor-pointer hover:scale-125' />
+                  <a href="/">
+                  <img src={logo} alt="food logo" className='h-14 cursor-pointer hover:scale-125' />
+                  </a>
                     <div className='lg:flex hidden gap-8 items-center'>
-                        <a href="" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Today Special</a>
-                        <a href="" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Why Special</a>
-                        <a href="" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Our menu</a>
+                        <a href="/" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Today Special</a>
+                        <Link to='Newfoods' className='text-[#191919] text-xl font-semibold hover:text-red-500' >Why specials</Link>
+                        <a href="RecommededFood" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Our menu</a>
                         <a href="" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Add food</a>
                         <a href="" className='text-[#191919] text-xl font-semibold hover:text-red-500'>Popular food</a>
-                        <button className='bg-red-900 active:scale-90 transition duration-100 transform hover:shadow-xl shadow-md rounded-full px-8 py-2 text-xl font-semibold text-white'>
+                        <Link to="login" className='bg-red-900 active:scale-90 transition duration-100 transform hover:shadow-xl shadow-md rounded-full px-8 py-2 text-xl font-semibold text-white'>
                             Login
-                        </button>
+                        </Link>
                     </div>
                     <div className='block lg:hidden z-40' onClick={handleNav} >
                         {
