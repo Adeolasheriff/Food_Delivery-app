@@ -8,6 +8,7 @@ import App from '../App';
 import RecommendedFood from '../component/RecommededFood';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
+import ProtectedRoute from '../auth/protectedRoute';
 
   const router = createBrowserRouter([
     {
@@ -16,7 +17,8 @@ import Register from '../auth/Register';
       children: [
         {
             path: "/",
-            element:<Home/>,
+            element:<ProtectedRoute><Home/></ProtectedRoute>
+            // element:<Home/>,
           },
 
           {
